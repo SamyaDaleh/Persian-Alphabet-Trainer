@@ -1,0 +1,323 @@
+<html lang="de">
+<head>
+    <title>Persisches Alphabet lernen</title>
+    <script type="text/javascript">
+
+        const bild_0 = new Image;
+        bild_0.src = "zeichen/0.gif";
+        const bild_1 = new Image;
+        bild_1.src = "zeichen/1.gif";
+        const bild_2 = new Image;
+        bild_2.src = "zeichen/2.gif";
+        const bild_3 = new Image;
+        bild_3.src = "zeichen/3.gif";
+        const bild_4 = new Image;
+        bild_4.src = "zeichen/4.gif";
+        const bild_5 = new Image;
+        bild_5.src = "zeichen/5.gif";
+        const bild_6 = new Image;
+        bild_6.src = "zeichen/6.gif";
+        const bild_7 = new Image;
+        bild_7.src = "zeichen/7.gif";
+        const bild_8 = new Image;
+        bild_8.src = "zeichen/8.gif";
+        const bild_9 = new Image;
+        bild_9.src = "zeichen/9.gif";
+
+        let aktion = 0;
+        let gesamt = 0;
+        let richtig = 0;
+        let loesung = 0;
+
+        function eingabe(eingabezahl) {
+            if (eingabezahl === -2) {
+                aktion = 0;
+                document.Inhalt.b_start.disabled = false;
+                document.Inhalt.b_stopp.disabled = true;
+                richtig = 0;
+                gesamt = 0;
+                document.Inhalt.auswertung.value
+                    = "Hier erscheint die Testauswertung.";
+                document.Inhalt.Anzeige_t.value = "";
+                document.Inhalt.Anzeige_i.src = "leer.gif";
+            }
+            if (eingabezahl === -1) {
+                aktion = 1;
+                document.Inhalt.b_start.disabled = true;
+                document.Inhalt.b_stopp.disabled = false;
+            }
+            if (aktion === 0 && eingabezahl >= 0) {
+                if (eingabezahl <= 9) {
+                    document.Inhalt.Anzeige_t.value = eingabezahl;
+                } else {
+                    switch (eingabezahl) {
+                        case "10":
+                            document.Inhalt.Anzeige_t.value = "a [?, "
+                                + unescape("%u0254") + ", "
+                                + unescape("%E6") + ", "
+                                + unescape("%D8") + "]";
+                            break;
+                        case "11":
+                            document.Inhalt.Anzeige_t.value = "b [b]";
+                            break;
+                        case "12":
+                            document.Inhalt.Anzeige_t.value = "p [p]";
+                            break;
+                        case "13":
+                            document.Inhalt.Anzeige_t.value = "t [t]";
+                            break;
+                        case "14":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("s%u0331%0A") + " [s]";
+                            break;
+                        case "15":
+                            document.Inhalt.Anzeige_t.value = "j ["
+                                + unescape("%u02A3") + "]";
+                            break;
+                        case "16":
+                            document.Inhalt.Anzeige_t.value = "ch ["
+                                + unescape("%u02A7") + "]";
+                            break;
+                        case "17":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u1E25%0A") + " [h, "
+                                + unescape("%D8") + "]";
+                            break;
+                        case "18":
+                            document.Inhalt.Anzeige_t.value = "kh [x]";
+                            break;
+                        case "19":
+                            document.Inhalt.Anzeige_t.value = "d [d]";
+                            break;
+                        case "20":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u1E95%0A") + " [z]";
+                            break;
+                        case "21":
+                            document.Inhalt.Anzeige_t.value = "r [r]";
+                            break;
+                        case "22":
+                            document.Inhalt.Anzeige_t.value = "z [z]";
+                            break;
+                        case "23":
+                            document.Inhalt.Anzeige_t.value = "zh ["
+                                + unescape("%u0292%0A") + "]";
+                            break;
+                        case "24":
+                            document.Inhalt.Anzeige_t.value = "s [s]";
+                            break;
+                        case "25":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u0161%0A%0A") + " ["
+                                + unescape("%u0283%0A") + "]";
+                            break;
+                        case "26":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u1E63%0A") + " [s]";
+                            break;
+                        case "27":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u017C%0A") + " [z]";
+                            break;
+                        case "28":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u1E6D%0A") + " [t]";
+                            break;
+                        case "29":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u1E93%0A") + " [z]";
+                            break;
+                        case "30":
+                            document.Inhalt.Anzeige_t.value
+                                = unescape("%u02BF%0A") + " [?, "
+                                + unescape("%D8") + "]";
+                            break;
+                        case "31":
+                            document.Inhalt.Anzeige_t.value = "gh ["
+                                + unescape("%u0263%0A") + ", q, "
+                                + unescape("%u0262%0A") + ", x]";
+                            break;
+                        case "32":
+                            document.Inhalt.Anzeige_t.value = "f [f]";
+                            break;
+                        case "33":
+                            document.Inhalt.Anzeige_t.value = "q [q, "
+                                + unescape("%u0262%0A") + "]";
+                            break;
+                        case "34":
+                            document.Inhalt.Anzeige_t.value = "k [k]";
+                            break;
+                        case "35":
+                            document.Inhalt.Anzeige_t.value = "g [g]";
+                            break;
+                        case "36":
+                            document.Inhalt.Anzeige_t.value = "l [l]";
+                            break;
+                        case "37":
+                            document.Inhalt.Anzeige_t.value = "m [m]";
+                            break;
+                        case "38":
+                            document.Inhalt.Anzeige_t.value = "n [n]";
+                            break;
+                        case "39":
+                            document.Inhalt.Anzeige_t.value = "w [v, u, o, ow]";
+                            break;
+                        case "40":
+                            document.Inhalt.Anzeige_t.value = "h [h, "
+                                + unescape("%D8") + ", " + unescape("%u03B5%0A")
+                                + ", " + unescape("%E6") + "]";
+                            break;
+                        case "41":
+                            document.Inhalt.Anzeige_t.value = "y [j, i, e]";
+                    }
+                }
+                document.Inhalt.Anzeige_i.src = "zeichen/" + eingabezahl
+                    + ".gif";
+            }
+            if (aktion === 1) {
+                if (eingabezahl >= 0) {
+                    if (eingabezahl !== loesung) {
+                        document.Inhalt.Anzeige_t.value = "?";
+                    } else {
+                        richtig++;
+                        neuezahl();
+                    }
+                    gesamt++;
+                    document.Inhalt.auswertung.value = "" + richtig + "/"
+                        + gesamt + " = " + ((richtig / gesamt) * 100) + "%";
+                } else {
+                    neuezahl();
+                }
+            }
+        }
+
+        function neuezahl() {
+            switch (document.Inhalt.auswahl.value) { //Abfrageauswahl
+                case "1":
+                    loesung = Math.round(Math.random() * 9);
+                    break;
+                case "2":
+                    loesung = Math.round(Math.random() * 10 + 10);
+                    break;
+                case "3":
+                    loesung = Math.round(Math.random() * 10 + 21);
+                    break;
+                case "4":
+                    loesung = Math.round(Math.random() * 9 + 32);
+                    break;
+                case "5":
+                    loesung = Math.round(Math.random() * 31 + 10);
+                    break;
+                /*   case "6":
+                   break;
+                   case "7":
+                   break;
+                   case "8":
+                   break;
+                   case "9":
+                   break; */
+            }
+            document.Inhalt.Anzeige_i.src = "zeichen/" + loesung + ".gif";
+            document.Inhalt.Anzeige_t.value = "";
+        }
+    </script>
+</head>
+<form name="Inhalt">
+    <noscript><b>In Ihrem Browser ist JavaScript deaktiviert. Diese Seite kann
+        ohne JavaScript nicht benutzt werden.</b></noscript>
+    <label>
+        <input type="text" name="Anzeige_t" size="9" readonly/>
+    </label>
+    <img src="leer.gif" name="Anzeige_i" alt="">
+    <div>
+        <button onclick="eingabe(1);" type="button">1</button>
+        <button onclick="eingabe(2);" type="button">2</button>
+        <button onclick="eingabe(3);" type="button">3</button>
+        <button onclick="eingabe(4);" type="button">4</button>
+        <button onclick="eingabe(5);" type="button">5</button>
+        <button onclick="eingabe(6);" type="button">6</button>
+        <button onclick="eingabe(7);" type="button">7</button>
+        <button onclick="eingabe(8);" type="button">8</button>
+        <button onclick="eingabe(9);" type="button">9</button>
+        <button onclick="eingabe(0);" type="button">0</button>
+    </div>
+    <div style="padding-left: 15px;">
+        <button onclick="eingabe(33)" type="button">Q</button>
+        <button onclick="eingabe(39)" type="button">W</button>
+        <button onclick="" type="button" disabled>E</button>
+        <button onclick="eingabe(21)" type="button">R</button>
+        <button onclick="eingabe(13)" type="button">T</button>
+        <button onclick="eingabe(22)" type="button">Z</button>
+        <button onclick="" type="button" disabled>U</button>
+        <button onclick="" type="button" disabled>I</button>
+        <button onclick="" type="button" disabled>O</button>
+        <button onclick="eingabe(12)" type="button">P</button>
+    </div>
+    <div style="padding-left: 30px;">
+        <button onclick="eingabe(10)" type="button">A</button>
+        <button onclick="eingabe(24)" type="button">S</button>
+        <button onclick="eingabe(19)" type="button">D</button>
+        <button onclick="eingabe(32)" type="button">F</button>
+        <button onclick="eingabe(35)" type="button">G</button>
+        <button onclick="eingabe(40)" type="button">H</button>
+        <button onclick="eingabe(15)" type="button">J</button>
+        <button onclick="eingabe(34)" type="button">K</button>
+        <button onclick="eingabe(36)" type="button">L</button>
+    </div>
+    <div style="padding-left: 45px;">
+        <button onclick="eingabe(41)" type="button">Y</button>
+        <button onclick="" type="button" disabled>X</button>
+        <button onclick="" type="button" disabled>C</button>
+        <button onclick="" type="button" disabled>V</button>
+        <button onclick="eingabe(11)" type="button">B</button>
+        <button onclick="eingabe(38)" type="button">N</button>
+        <button onclick="eingabe(37)" type="button">M</button>
+    </div>
+    <div>
+        <button onclick="eingabe(14);" type="button">s&#817;</button>
+        <button onclick="eingabe(16);" type="button">ch</button>
+        <button onclick="eingabe(17);" type="button">&#7717;</button>
+        <button onclick="eingabe(18);" type="button">kh</button>
+        <button onclick="eingabe(20);" type="button">&#7829;</button>
+        <button onclick="eingabe(23);" type="button">zh</button>
+        <button onclick="eingabe(25);" type="button">&#353;</button>
+        <button onclick="eingabe(26);" type="button">&#7779;</button>
+        <button onclick="eingabe(27);" type="button">&#380;</button>
+        <button onclick="eingabe(28);" type="button">&#7789;</button>
+        <button onclick="eingabe(29);" type="button">&#7827;</button>
+        <button onclick="eingabe(30);" type="button">&#703;</button>
+        <button onclick="eingabe(31);" type="button">gh</button>
+    </div>
+    <button onclick="eingabe(-1);" type="button" name="b_start">Abfrage
+        starten
+    </button>
+    <label>
+        <select name="auswahl" size="1" onChange="">
+            <option value="1" selected="selected">Ziffern 0 - 9</option>
+            <option value="2">11 Buchstaben Alef - S&#227;l</option>
+            <option value="3">11 Buchstaben Re - Gheyn</option>
+            <option value="4">10 Buchstaben Fe - Je</option>
+            <option value="5">alle Buchstaben (32)</option>
+            <!-- <option value="6">[Buchstaben in Kombination am Anfang]</option>
+            <option value="7">[Buchstaben in Kombination am Ende]</option>
+            <option value="8">[Buchstaben in Kombination in der Mitte]</option>
+            <option value="9">[alles abfragen]</option> -->
+        </select>
+    </label>
+    <button onclick="eingabe(-2);" disabled type="button"
+            name="b_stopp">Abfrage stoppen
+    </button>
+    <br/>
+    <label>
+        <input type="text" readonly
+               value="Hier erscheint die Testauswertung." name="auswertung"
+               size="40"/>
+    </label><br/>
+    Klicke die Zeichen an, um deren persische Entsprechung zu sehen. Suche dir
+    im Dropdown-Men&uuml; aus, welche Zeichen du lernen m&ouml;chtest und klicke
+    auf Abfrage starten. Dir werden persische Zeichen gezeigt, deren
+    Entsprechung du auf der Tastatur anklicken musst. Unten siehst du dein
+    aktuelles Testergebnis. Es gibt keine Auswertung und du kannst den Test
+    jederzeit abbrechen.
+</form>
+</html>
